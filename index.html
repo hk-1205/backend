@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration & Contact Us</title>
+  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<!--CSS-->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(bgimg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px 40px; 
+    text-align: center;
+    border-radius: 20px;
+}
+
+.form-box h1 {
+    font-size: 24px; 
+    margin-bottom: 40px; 
+    color: #3c00a0;
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.input-field {
+    background: #eaeaea;
+    margin: 10px; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    max-height: 50px; 
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input, select {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 12px; 
+    font-size: 14px;
+}
+
+.input-field i {
+    margin-left: 10px; 
+    color: #999;
+}
+
+form p {
+    text-align: center;
+    font-size: 12px;
+}
+
+form p a {
+    text-decoration: none;
+    color: #3c00a0;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 35px; 
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
+}
+
+form h3 {
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 22px; 
+    text-align: center;
+}
+
+.inputt{
+    border: 0;
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 14px; 
+    border-radius: 5px;
+}
+
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 15px; 
+    outline: none;
+    background: #f5f5f5;
+    font-size: 14px; 
+    border-radius: 5px;
+}
+form textarea {
+    resize: none;
+    height: 80px;
+    width: 372px;
+}
+
+
+form button {
+    background: #3c00a0;
+    color: #fff;
+    height: 35px;
+    border-radius: 20px;
+    border: 0;
+    width: 150px;
+    outline: 0;
+    margin: 20px auto 0; 
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #2a0075; 
+}
+    </style>
+
+
+<script>
+    
+</script>
+</head>
+<body>
+    <div class="container">
+        <!-- College Registration Form -->
+        <div class="form-box" id="registrationForm">
+            <h1 id="title">College Registration</h1>
+            <form action="/index" method="POST">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Full Name" name="name" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="text" placeholder="Contact Number" name="Contact" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <select name="department" required>
+                            <option value="" disabled selected>Select Department</option>
+                            <option value="science">Science</option>
+                            <option value="arts">Arts</option>
+                            <option value="commerce">Commerce</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-book"></i>
+                        <select name="course" required>
+                            <option value="" disabled selected>Select Course</option>
+                            <option value="bsc">B.Sc</option>
+                            <option value="ba">B.A</option>
+                            <option value="bcom">B.Com</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="bca">BCA</option>
+                            <option value="bba">BBA</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Register</button>
+                    <button type="button" id="contactBtn">Contact Us</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Us Form -->
+     
+        <div>
+            <div class="form-box" id="contactForm" style="display: none;">
+                <h1 id="title">Contact Us</h1>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <div class="input-group">
+                        <input class="inputt" type="text" id="name" placeholder="Your Name" required>
+                        <input class="inputt" type="email" id="email" placeholder="E-Mail" required>
+                        <input class="inputt" type="number" id="number" placeholder="Phone Number" required>
+                        <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+                    </div>
+                    <button type="submit">Send</button> 
+                    <button type="button" id="backBtn">Back to Registration</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!--JS-->
+    <script >
+        let contactBtn = document.getElementById("contactBtn");
+let backBtn = document.getElementById("backBtn");
+let registrationForm = document.getElementById("registrationForm");
+let contactForm = document.getElementById("contactForm");
+
+
+contactBtn.onclick = function () {
+    registrationForm.style.display = "none";
+    contactForm.style.display = "block";
+};
+
+backBtn.onclick = function () {
+    contactForm.style.display = "none";
+    registrationForm.style.display = "block";
+};
+
+
+function sendEmail() {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "iishaavermaa@gmail.com",
+        Password: "Ishaisha23@",
+        To: "iishaavermaa@gmail.com",
+        From: document.getElementById("email").value,
+        Subject: "New Contact Form Enquiry",
+        Body: `Name: ${document.getElementById("name").value}
+               Email: ${document.getElementById("email").value}
+               Phone: ${document.getElementById("number").value}
+               Message: ${document.getElementById("message").value}`
+    }).then((message) => alert("message sent successfully"));
+}
+
+    </script>
+</body>
+</html>
