@@ -1,0 +1,24 @@
+const logFileName = 'requests.log';
+const MAX_LOG_SIZE = 1 * 1024 * 1024; // 1MB
+
+function rotateLogFile() {
+  fs.stat(logFileName, (err, stats) => {
+    if (err) {
+      console.error('Error checking log file size', err);
+      return;
+    }
+    if (stats.size > MAX_LOG_SIZE) {
+      const newLogFileName = `requests_${new Date().toISOString()}.log`;
+      fs.rename(logFileName, newLogFileName, (err) => {
+        if (err) {
+          console.error('Error rotating log file', err);
+        } else {
+          console.log(`Log file rotated. New file: ${newLogFileName}`);
+        }
+      });
+    }
+  });
+}
+
+// Call this function periodically or before writing to the log file
+setInterval(rotateLogFile, 60000); // Rotate log file every minute

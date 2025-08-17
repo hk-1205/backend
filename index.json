@@ -1,0 +1,26 @@
+[
+  {
+    "full_name": "hello",
+    "email": "bb@gmail.com",
+    "password": "XCVBN",
+    "contact_number": "45678",
+    "department": "science",
+    "course": "bsc"
+  },
+  {
+    "full_name": "hello",
+    "email": "bb@gmail.com",
+    "password": "xcvb",
+    "contact_number": "6252",
+    "department": "science",
+    "course": "bsc"
+  },
+  {
+    "full_name": "hello",
+    "email": "bb@gmail.com",
+    "password": "fghjk",
+    "Contact": "221",
+    "department": "science",
+    "course": "bsc"
+  }
+]

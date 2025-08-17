@@ -1,0 +1,15 @@
+app.use((req, res, next) => {
+  const requestDetails = {
+    timestamp: new Date().toISOString(),
+    ip: req.ip,
+    url: req.originalUrl,
+    protocol: req.protocol,
+    method: req.method,
+    hostname: req.hostname
+  };
+  
+  // Log the details (to be written to the file)
+  logRequestToFile(requestDetails);
+  
+  next(); // Pass control to the next middleware/route handler
+});
